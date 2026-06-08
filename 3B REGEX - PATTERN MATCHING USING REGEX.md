@@ -1,43 +1,42 @@
-# Exp.No:3c
-## LIST - EVEN NUMBERS LIST
+# Exp.No:3b  
+## REGEX - PATTERN MATCHING USING REGEX
 
 ---
 
 ### AIM  
-To write a Python function that accepts a number **N** and creates a list containing all even numbers up to **N**.
+To write a Python program that matches a string containing an `'a'` followed by **two to three `'b'` characters** using regular expressions.
 
 ---
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Accept an integer `a` from the user.  
-3. Create an empty list `l`.  
-4. Use a `for` loop to iterate through numbers from `1` to `a - 1`:  
-   - For each number `i`, check if it is even using `i % 2 == 0`.  
-   - If it is even, append `i` to the list `l`.  
-5. Print the final list `l` containing all the even numbers.  
-6. Terminate the program.
+2. Accept a string `str1` from the user.  
+3. Define the regular expression pattern as `r"[a]+b{2,3}"`.  
+4. Use the `re.match()` function to check if the string `str1` matches the pattern.  
+5. If a match is found, print `"Found a match!"`.  
+6. If no match is found, print `"Not matched!"`.  
+7. Terminate the program.
 
 ---
-
 ### PROGRAM
 
-```python
-def createlist(n):
-    l=[]
-    for i in range(2,n):
-        if i%2==0:
-            l.append(i)
-    print(l)
-```
 
+```python
+import re
+str=input()
+x=re.search("bb",str)
+if x:
+    print("Found a match!")
+else:
+    print("Not matched!")
+
+```
 ### OUTPUT
 
-<img width="861" height="227" alt="Screenshot 2025-08-31 215128" src="https://github.com/user-attachments/assets/19e01921-5348-4083-9b14-64733b34a5e6" />
+<img width="849" height="215" alt="Screenshot 2025-08-31 214736" src="https://github.com/user-attachments/assets/6de5dea1-8a9f-4d44-80fa-5b60f6903d40" />
 
 
 ### RESULT
 
-Thus a Python function that accepts a number **N** and creates a list containing all even numbers up to **N** was executed and implemented successfully.
-
+Thus a Python program that matches a string containing an `'a'` followed by **two to three `'b'` characters** using regular expressions was executed and implemented successfully.
